@@ -1,0 +1,142 @@
+[
+    {
+        "category": [
+            {
+                "name": "IT"
+            },
+            {
+                "name": "engineering"
+            },
+            {
+                "name": "Education"
+            },
+            {
+                "name": "finance"
+            },
+            {
+                "name": "marketing"
+            },
+            {
+                "name": "Administration"
+            },
+            {
+                "name": "healthcare"
+            },
+            {
+                "name": "Human Resources"
+            },
+            {
+                "name": "customer service"
+            },
+            {
+                "name": "Hospitality"
+            },
+            {
+                "name": "Others"
+            }
+        ],
+        "experience": [
+            {
+                "experience": "fresher"
+            },
+            {
+                "experience": "1 year"
+            },
+            {
+                "experience": "2 year"
+            },
+            {
+                "experience": "3 year"
+            },
+            {
+                "experience": "4 years"
+            },
+            {
+                "experience": "5 years"
+            },
+            {
+                "experience": "0-2 years"
+            },
+            {
+                "experience": "1-2 years"
+            },
+            {
+                "experience": "2-3 years"
+            },
+            {
+                "experience": "3-4 years"
+            },
+            {
+                "experience": "3-5 years"
+            }
+        ],
+        "location": [
+            {
+                "location": "San Francisco, CA"
+            },
+            {
+                "location": "New York, NY"
+            },
+            {
+                "location": "Chicago, IL"
+            },
+            {
+                "location": "Washington, D.C."
+            },
+            {
+                "location": "Los Angeles, CA"
+            },
+            {
+                "location": "Boston, MA"
+            },
+            {
+                "location": "Seattle, WA"
+            },
+            {
+                "location": "Austin, TX"
+            },
+            {
+                "location": "Houston, TX"
+            },
+            {
+                "location": "Miami, FL"
+            },
+            {
+                "location": "Dallas, TX"
+            },
+            {
+                "location": "Atlanta, GA"
+            },
+            {
+                "location": "Denver, CO"
+            },
+            {
+                "location": "San Diego, CA"
+            },
+            {
+                "location": "Orlando, FL"
+            },
+            {
+                "location": "Phoenix, AZ"
+            },
+            {
+                "location": "Charlotte, NC"
+            },
+            {
+                "location": "Pacific Northwest, USA"
+            },
+            {
+                "location": "Midwest, USA"
+            },
+            {
+                "location": "Various locations"
+            },
+            {
+                "location": "Urban areas"
+            },
+            {
+                "location": "Metropolitan areas"
+            }
+        ]
+    }
+]
