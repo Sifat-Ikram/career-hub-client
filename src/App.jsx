@@ -1,19 +1,13 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "./components/common/Navbar/Navbar"
-import Footer from "./components/common/footer/Footer"
-
+import { Outlet } from "react-router-dom";
+import MenuPart from "./components/common/menu/MenuPart";
 
 function App() {
-
   return (
     <div>
-      <Navbar />
-      <div className="min-h-screen">
-        <Outlet />
-      </div>
-      <Footer />
+      <MenuPart />
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

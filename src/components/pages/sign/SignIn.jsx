@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { FaGoogle } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../provider/AuthProvider';
+import Navbar from '../../common/Navbar/Navbar';
+import Footer from '../../common/footer/Footer';
 
 const SignIn = () => {
     const { logIn, googleRegister } = useContext(AuthContext);
@@ -52,6 +54,7 @@ const SignIn = () => {
 
     return (
         <div>
+            <Navbar />
             <div className="my-10">
                 <div className="md:w-3/4 mx-auto">
                     <div className="md:w-2/3 mx-auto gap-8">
@@ -87,6 +90,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
