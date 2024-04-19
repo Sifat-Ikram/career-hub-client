@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-[#C74208] text-white py-8">
+    <footer className="bg-[#C74208] text-white py-8 mt-10">
       <div className="container mx-auto">
         <div className="mb-8 font-semibold">
           <ul className="flex max-md:justify-evenly justify-center md:gap-16 flex-wrap gap-3">

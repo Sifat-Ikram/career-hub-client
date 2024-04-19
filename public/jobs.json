@@ -13,7 +13,7 @@
         "contact_information": "hr@techinnovations.com",
         "company_overview": "Tech Innovations Ltd. is a leading provider of innovative software solutions. With a focus on cutting-edge technologies, we deliver software applications that empower businesses to thrive in the digital age. Our team of talented professionals is dedicated to delivering exceptional results and exceeding client expectations. At Tech Innovations Ltd., we foster a culture of creativity, collaboration, and continuous learning.",
         "benefits": "Health insurance, retirement plan, flexible work hours.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "2 year",
         "skills": "Java, JavaScript Software, Development"
     },
@@ -31,7 +31,7 @@
         "contact_information": "careers@networkdynamics.com",
         "company_overview": "Network Dynamics Inc. provides cutting-edge networking solutions for businesses. With a focus on innovation and reliability, we deliver customized network infrastructure to help our clients achieve their business goals. Our team of experts is committed to excellence in every project, ensuring seamless connectivity and secure operations. At Network Dynamics Inc., we prioritize customer satisfaction and technical excellence.",
         "benefits": "Health benefits, paid time off, career development opportunities.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "1 year",
         "skills": "Network Administration, Cisco, Firewalls"
     },
@@ -49,7 +49,7 @@
         "contact_information": "jobs@datamanagement.com",
         "company_overview": "Data Management Solutions LLC specializes in efficient data management solutions. Our team of experts is dedicated to delivering high-quality database solutions that help businesses thrive in a data-driven world. With a focus on innovation and efficiency, we empower our clients to make informed decisions and drive business growth. At Data Management Solutions LLC, we are committed to excellence in every project.",
         "benefits": "Health insurance, retirement savings plan, remote work options.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "2 year",
         "skills": "SQL, Database Management, Data Integrity"
     },
@@ -67,7 +67,7 @@
         "contact_information": "careers@securetech.com",
         "company_overview": "SecureTech Solutions is a leading provider of comprehensive cybersecurity solutions. With a focus on innovation and excellence, we deliver tailored security solutions that address our clients' unique challenges. Our team of experts is dedicated to staying ahead of emerging threats and protecting our clients' digital assets. At SecureTech Solutions, we are committed to providing exceptional service and safeguarding our clients' security.",
         "benefits": "Health benefits, retirement plan, ongoing training.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "1 year",
         "skills": "Cybersecurity, Security Analysis, Threat Monitoring"
     },
@@ -85,7 +85,7 @@
         "contact_information": "careers@websolutions.com",
         "company_overview": "Web Solutions Co. specializes in developing user-friendly web solutions. Our team of experienced developers is dedicated to delivering high-quality websites and web applications that meet the needs of our clients. With a focus on creativity and innovation, we strive to push the boundaries of web development and provide cutting-edge solutions. At Web Solutions Co., we value collaboration, excellence, and continuous learning.",
         "benefits": "Health insurance, flexible work hours, opportunities for growth.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "fresher",
         "skills": "HTML, CSS, JavaScript, Web Development"
     },
@@ -103,7 +103,7 @@
         "contact_information": "careers@sigroup.com",
         "company_overview": "Systems Integration Group specializes in integrating IT systems for businesses. Our team of experienced professionals is dedicated to delivering customized solutions that streamline operations and drive business success. With a focus on collaboration and innovation, we work closely with our clients to understand their unique challenges and deliver tailored solutions. At Systems Integration Group, we are committed to excellence in every project.",
         "benefits": "Health benefits, retirement plan, remote work options.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "1 year",
         "skills": "Systems Analysis, Business Requirements, IT Systems"
     },
@@ -121,7 +121,7 @@
         "contact_information": "jobs@techprojects.com",
         "company_overview": "Tech Projects Inc. specializes in delivering innovative IT solutions. Our team of skilled professionals is dedicated to providing exceptional service and delivering projects that exceed client expectations. With a focus on quality and customer satisfaction, we leverage cutting-edge technologies and best practices to drive business success. At Tech Projects Inc., we foster a culture of collaboration, creativity, and continuous improvement.",
         "benefits": "Health insurance, 401(k) matching, professional development opportunities.",
-        "category": "IT",
+        "category": "Technology",
         "experience": "fresher",
         "skills": "Project Management, IT Projects, Leadership"
     },

@@ -14,6 +14,20 @@ import HomePage from "./components/pages/home/home_page/HomePage.jsx";
 import Dashboard from "./components/pages/dashboard/Dashboard.jsx";
 import AllUsers from "./components/pages/admin_router/users/AllUsers.jsx";
 import AppliedJobs from "./components/pages/admin_router/applied/AppliedJobs.jsx";
+import ManageJobs from "./components/pages/admin_router/manage_jobs/ManageJobs.jsx";
+import ProfilePage from "./components/pages/user_route/profile/ProfilePage.jsx";
+import UpdateProfile from "./components/pages/user_route/profile/UpdateProfile.jsx";
+import UserAppliedJobs from "./components/pages/user_route/applied_job/UserAppliedJobs.jsx";
+import AddJob from "./components/pages/emplyer_route/add_job/AddJob.jsx";
+import MyAddedJobs from "./components/pages/emplyer_route/my_jobs/MyAddedJobs.jsx";
+import EmployerAppliedJobs from "./components/pages/emplyer_route/applied_jobs/EmployerAppliedJobs.jsx";
+import EmployerHome from "./components/pages/emplyer_route/employer_home/EmployerHome.jsx";
+import UpdateEmployerPage from "./components/pages/emplyer_route/employer_home/UpdateEmployerPage.jsx";
+import Internship from "./components/pages/internship/Internships.jsx";
+import AdminHome from "./components/pages/admin_router/home/AdminHome.jsx";
+import CategoryPage from "./components/pages/search_category/CategoryPage.jsx";
+import GiveReview from "./components/pages/user_route/give_review/GiveReview.jsx";
+import EmployerShortlist from "./components/pages/emplyer_route/shortlist/EmployerShortlist.jsx";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +46,7 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "/signIn/:id",
+        path: "/signIn",
         element: <SignIn />,
       },
       {
@@ -40,8 +54,16 @@ const router = createBrowserRouter([
         element: <FindJob />
       },
       {
+        path: "/internship",
+        element: <Internship />
+      },
+      {
         path: "/details/:id",
         element: <JobDetails />
+      },
+      {
+        path: "/searchCategory/:id",
+        element: <CategoryPage />
       }
     ],
   },
@@ -56,6 +78,54 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/appliedJobs",
         element: <AppliedJobs />
+      },
+      {
+        path: "/dashboard/manageJob",
+        element: <ManageJobs />
+      },
+      {
+        path: "/dashboard/profile",
+        element: <ProfilePage />
+      },
+      {
+        path: "/dashboard/updateProfile/:id",
+        element: <UpdateProfile />
+      },
+      {
+        path: "/dashboard/userAppliedJobs",
+        element: <UserAppliedJobs />
+      },
+      {
+        path: "/dashboard/addJob",
+        element: <AddJob />
+      },
+      {
+        path: "/dashboard/myJobs",
+        element: <MyAddedJobs />
+      },
+      {
+        path: "/dashboard/employerAppliedJob",
+        element: <EmployerAppliedJobs />
+      },
+      {
+        path: "/dashboard/employerHome",
+        element: <EmployerHome />
+      },
+      {
+        path: "/dashboard/updateEmployerProfile/:id",
+        element: <UpdateEmployerPage />
+      },
+      {
+        path: "/dashboard/adminHome",
+        element: <AdminHome />
+      },
+      {
+        path: "/dashboard/review",
+        element: <GiveReview />
+      },
+      {
+        path: "/dashboard/shortlisted",
+        element: <EmployerShortlist />
       }
     ]
   }

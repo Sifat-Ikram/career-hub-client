@@ -47,7 +47,7 @@ const AppliedJobs = () => {
 
     return (
         <div className='w-5/6 py-10 mx-auto'>
-            <div className='py-3 mx-auto text-center border-t-2 border-b-2 w-60'>
+            <div className='py-3 mx-auto text-center w-60'>
                 <h1 className='text-2xl'>Applied Jobs</h1>
             </div>
             <div className='p-2 mt-10'>

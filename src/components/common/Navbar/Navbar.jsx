@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TbCalendarSearch } from "react-icons/tb";
 import { HiMenu } from "react-icons/hi";
 import { useContext } from "react";
@@ -6,13 +5,12 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import { BsPersonSquare } from "react-icons/bs";
 import { MdPersonPin } from "react-icons/md";
-import { Link } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const axiosPublic = useAxiosPublic();
   const { user, logOut } = useContext(AuthContext);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const { data: currentUser = [] } = useQuery({
     queryKey: ["currentUser.email"],
@@ -33,10 +31,6 @@ const Navbar = () => {
     } catch (err) {
       console.error(err.message);
     }
-  };
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
   };
 
   const navLinks = (
@@ -60,6 +54,57 @@ const Navbar = () => {
         <a className="nav-link font-semibold text-[#C74208]" href={"/"}>
           Courses
         </a>
+      </li>
+    </>
+  );
+  const userLoggedLinks = (
+    <>
+      <li>
+        <Link to={"/profile"} className="nav-link font-semibold text-[#C74208]">Home</Link>
+      </li>
+      <li>
+        <Link to={"/bookings"} className="nav-link font-semibold text-[#C74208]">Bookings</Link>
+      </li>
+      <li onClick={handleLogOut}>
+        <Link to="/" className="nav-link font-semibold text-[#C74208]">Log Out</Link>
+      </li>
+    </>
+  );
+
+  const notLoggedLink = (
+    <>
+      <li>
+        <div className="flex justify-center w-72 items-center p-4 hover:bg-gray-200 cursor-pointer">
+          <div className="text-4xl mr-4">
+            <BsPersonSquare />
+          </div>
+          <div className="flex-1">
+            <h1 className="text-base font-bold text-center text-[#C74208]">Sign in</h1>
+            <p className="text-xs text-center">
+              Sign in to explore more
+            </p>
+            <div className="flex justify-evenly items-center mt-2">
+              <Link to="/signIn" className="shadow-md text-center p-2 w-full rounded-md btn-outline border-2 border-solid hover:border-white border-[#C74208] text-[#C74208] hover:bg-[#C74208] hover:text-white">Sign In</Link>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div className="flex justify-center w-72 items-center p-4 hover:bg-gray-100 cursor-pointer">
+          <div className="text-4xl mr-4">
+            <MdPersonPin />
+          </div>
+          <div className="flex-1">
+            <h1 className="text-base font-bold text-[#C74208]">Employee or Employer</h1>
+            <p className="text-xs">
+              Create account to find candidates or to find dream job
+            </p>
+            <div className="flex justify-evenly items-center mt-2 gap-3">
+              <Link to='/signUp/employee' className="shadow-md p-2 w-full rounded-md btn-outline border-2 border-solid hover:border-white border-[#C74208] text-[#C74208] hover:bg-[#C74208] hover:text-white">Employee</Link>
+              <Link to="/signUp/employer" className="shadow-md p-2 w-full rounded-md btn-outline border-2 border-solid hover:border-white border-[#C74208] text-[#C74208] hover:bg-[#C74208] hover:text-white">Employer</Link>
+            </div>
+          </div>
+        </div>
       </li>
     </>
   );
@@ -96,82 +141,30 @@ const Navbar = () => {
         <div className="navbar-center hidden md:flex">
           <ul className="flex gap-4">{navLinks}</ul>
         </div>
-        <div
-          className="dropdown dropdown-bottom dropdown-end dropdown-hover"
-          onClick={toggleDropdown}
-        >
+        <div className="dropdown dropdown-hover dropdown-end">
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle avatar"
+            className="btn btn-ghost btn-circle avatar relative"
           >
             <div>
               <img
                 alt="Profile"
                 src={
-                  user
-                      ? loggedUser.photoUrl
-                      : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  loggedUser
+                    ? loggedUser.photoUrl
+                    : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                 }
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-12 h-12 rounded-full object-cover transition duration-300 ease-in-out transform hover:scale-110"
               />
             </div>
-            <div
-              tabIndex={0}
-              className="dropdown-content z-[1] menu shadow bg-base-100 rounded-box"
-            >
-              <div>
-                {loggedUser ? (
-                  <ul>
-                    <li>home</li>
-                    <li>bookings</li>
-                    <li onClick={()=> handleLogOut}>Log Out</li>
-                  </ul>
-                ) : (
-                  <div className="shadow menu absolute bg-white rounded w-72">
-                    <div className="flex justify-center items-center p-4 hover:bg-gray-100 cursor-pointer">
-                      <div className="text-4xl mr-4">
-                        <BsPersonSquare />
-                      </div>
-                      <div>
-                        <h1 className="text-base font-bold">Employee</h1>
-                        <p className="text-xs">
-                          Sign in or create your account to manage your profile
-                        </p>
-                        <div className="flex justify-evenly items-center mt-2">
-                          <button className="bg-white shadow-md p-2">
-                            <Link to="/signIn/employee">Sign In</Link>
-                          </button>
-                          <button className="bg-white shadow-md p-2">
-                            <Link to="/signUp/employee">Create Account</Link>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex justify-center items-center p-4 hover:bg-gray-100 cursor-pointer">
-                      <div className="text-4xl mr-4">
-                        <MdPersonPin />
-                      </div>
-                      <div>
-                        <h1 className="text-base font-bold">Employer</h1>
-                        <p className="text-xs">
-                          Sign in or create account to find the best candidates
-                        </p>
-                        <div className="flex justify-evenly items-center mt-2">
-                          <button className="bg-white shadow-md p-2">
-                            <Link to="/signIn/employer">Sign In</Link>
-                          </button>
-                          <button className="bg-white shadow-md p-2">
-                            <Link to="/signUp/employer">Create Account</Link>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-50 relative menu p-0 shadow bg-base-100 rounded-box"
+          >
+            {loggedUser ? userLoggedLinks : notLoggedLink}
+          </ul>
         </div>
       </div>
     </nav>

@@ -2,34 +2,34 @@
     {
         "category": [
             {
-                "name": "IT"
+                "name": "Technology"
             },
             {
-                "name": "engineering"
+                "name": "Engineering"
             },
             {
                 "name": "Education"
             },
             {
-                "name": "finance"
+                "name": "Finance"
             },
             {
-                "name": "marketing"
+                "name": "Marketing"
             },
             {
                 "name": "Administration"
             },
             {
-                "name": "healthcare"
+                "name": "Healthcare"
+            },
+            {
+                "name": "Hospitality"
             },
             {
                 "name": "Human Resources"
             },
             {
-                "name": "customer service"
-            },
-            {
-                "name": "Hospitality"
+                "name": "Customer Service"
             },
             {
                 "name": "Others"

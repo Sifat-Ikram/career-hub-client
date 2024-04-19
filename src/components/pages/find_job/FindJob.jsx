@@ -40,6 +40,8 @@ const FindJob = () => {
     },
   });
 
+
+
   const getFilteredJobs = () => {
     let filteredJobs = jobs;
     if (value) {

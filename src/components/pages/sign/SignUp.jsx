@@ -21,8 +21,6 @@ const SignUp = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
 
-
-
   const handleGoogleRegister = () => {
     googleRegister()
       .then((res) => {
@@ -79,10 +77,16 @@ const SignUp = () => {
             photoUrl: resImage.data.data.display_url,
             role: userRole.id
           };
+          
           axiosPublic.post("/user", userInfo).then((res) => {
             if (res.data.insertedId) {
               console.log(res.data);
-              Swal.fire("You signed up successfully!");
+              Swal.fire({
+                position: "bottom-right",
+                title: "You signed up successfully",
+                showConfirmButton: false,
+                timer: 500,
+              });
               navigate(location?.state ? location.state : "/");
             } else {
               Swal.fire("Your signed up failed!");

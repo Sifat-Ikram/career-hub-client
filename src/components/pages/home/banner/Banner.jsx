@@ -1,38 +1,41 @@
-import { useForm } from 'react-hook-form';
-import banner from '../../../../assets/banner.jpeg';
+import { useState } from "react";
+import job from "../../../../assets/home/job.jpg";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
-  const { register, handleSubmit } = useForm();
+  const [value, setValue] = useState("");
 
-  const onSubmit = (data) => {
-    const value = data.search;
-    // Do something with the search value, such as passing it to a parent component or performing a search operation
-    console.log('Search Value:', value);
+  const handleSearch = (e) => {
+    setValue(e.target.value.toLowerCase());
   };
 
   return (
     <div
-      className="relative overflow-hidden bg-cover bg-center md:h-[500px] h-[300px] shadow-lg"
-      style={{
-        backgroundImage: `url(${banner})`,
-      }}
+      className="hero min-h-screen relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${job})` }}
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-        <div className="text-center px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-wide">Find Your Dream Job</h1>
-          <form onSubmit={handleSubmit(onSubmit)} className="flex justify-center items-center">
+      <div className="hero-overlay bg-black bg-opacity-60 absolute inset-0"></div>
+      <div className="hero-content text-white text-center relative z-10">
+        <div className="max-w-md mx-auto">
+          <h1 className="mb-3 text-3xl md:text-5xl font-bold">
+            Find Your Dream Job
+          </h1>
+          <p className="mb-3 text-sm md:text-base">
+            Explore thousands of opportunities waiting for you. Start your
+            journey today.
+          </p>
+          <div className="flex flex-col mb-5">
             <input
               type="text"
-              {...register("search")}
+              value={value}
+              onChange={handleSearch}
               placeholder="Enter job title or keyword"
-              className="py-3 px-4 rounded-lg border-none bg-white text-gray-800 w-full md:max-w-md mb-4 md:mb-0 md:mr-2 shadow-md"
-              style={{ flex: 1 }}
+              className="input w-full mb-2 text-white bg-transparent border-b border-[#C74208] focus:outline-none focus:border-[#C74208]"
             />
-            <button type="submit" className="buttons ml-2">
-              Search
-            </button>
-          </form>
+            <Link to={`/searchCategory/${value.toLowerCase()}`}>
+              <button className="btn buttons border-[#C74208] w-full">Search</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
